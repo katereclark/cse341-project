@@ -75,7 +75,7 @@ mongoose
   .connect(MONGODB_URL, options)
   .then((result) => {
     // This should be your user handling code implement following the course videos
-    app.listen(PORT);
+    app.listen(PORT, () => console.log(`Heroku: Listening on ${PORT}`));
   })
   .catch((err) => {
     console.log(err);
